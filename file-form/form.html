@@ -1,0 +1,157 @@
+<style>
+    body {
+        font-family: 'Anaheim';
+        font-size:  1.2em;
+    }
+    #outside {
+       background-color: skyblue;
+       padding-top: 25px;
+       padding-bottom: 25px;
+    }
+    h1 {
+     font-size: 1.5em;
+     text-align: center;
+     text-transform: capitalize;
+    }
+    form {
+        margin: 0 auto;
+        width:70%;
+        padding:1em;
+        border:1px solid #ccc;
+        border-radius: 1em;
+    }
+    #survey-form{
+        background-color: white;
+    }
+    fieldset {
+        border: 1px solid lightgrey;
+        margin: 10px;
+    }
+    legend {
+        font-weight: 700;
+    }
+    #number {
+        width:150px;
+    }
+    div + div{
+        margin-top: 1em;
+    }
+    input, textarea {
+        width: 200px;
+        border: 1px solid #999;
+    }
+    input:focus, textarea:focus{
+        border-color: orangered;
+    }
+    textarea{
+        vertical-align: top;
+        height: 5em;
+        resize: vertical;
+    }
+    .button {
+        padding-left: 90px;
+    }
+    button {
+        margin: .5em;
+        font-size: 1em;
+        text-transform: capitalize;
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 2px;
+    }
+    #submitbutton{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div id="outside">
+    <form id="survey-form" action="" method="post">
+        <h1 id="title"> Application for permission </h1>
+        <p id="description"><b>Note:</b>Form is to be complte at least 21 days prior to date</p>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <div>
+                <label id="name-label" for="name">Name: </label>
+                <input type="text" required id="name"
+                name="user-name" placeholder="" >
+            </div>
+            <div>
+                <label id="address-label" >Address: </label>
+                <input type="Address" id="address"
+                name="Address" placeholder="" >
+            </div>
+            <div>
+                <label id="email-label" for="Email">Email: </label>
+                <input type="email" id="email"
+                name="user_email" placeholder="" >
+            </div>
+            <div>
+                <label id="number-label" for="phone" >Phone Number: </label>
+                <input type="number" id="number" name="user_name"
+                placeholder="" min="1" max="9">
+            </div>
+             <!---ratio button-->
+             <div>
+            <label for="Gender">Gender</label>
+            <p>
+                <input type="radio" name="gender" value="male" checked>Male<br>
+                <input type="radio" name="gender" value="female" checked>Female<br>
+                <input type="radio" name="gender" value="other" checked>other<br>
+            </p>
+        </div>
+        <label for="date-label">Date of Proposed Outing:</label>
+        <input type="date" name="bday">
+        </fieldset>
+
+        <!----checkboxes-->
+        <fieldset>
+            <label for="Gender">which one is familiar for u?</label>
+            <p>
+                <input type="checkbox" name="c" value="c">I learned my first language c.<br>
+                <input type="checkbox" name="c++" value="c++">my second language is c++..<br>
+                <input type="checkbox" name="java" value="java">java is oriented language.<br>
+                <input type="checkbox" name="python" value="python">Now a days people use python.<br>
+                <input type="checkbox" name="kotlin" value="kotlin"> I recently heared the language.<br>
+                <input type="checkbox" name="mysql" value="mysql">Used for database connrctivity.<br>
+                <input type="checkbox" name="mangodb" value="mangodb">It is also a database.<br>
+                <input type="checkbox" name="HTML &CSS" value="bootstrap">It is a markup language.<br>
+
+            </p>
+        </fieldset>
+
+        <!---Dropdown menus-->
+   
+<fieldset>
+<div>
+<label for="politics" >Education level completed:</label>
+<select id="dropdown2">
+    <option value="university">university</option>
+    <option value="college">college</option>
+    <option value="secondary">High school</option>
+    <option value="None">None</option>
+
+</select>
+</div>
+</fieldset> 
+<!--------Text Areas-->
+
+<fieldset>
+    <legend>Essay Section</legend>
+    <div>
+        <label for="msg"></label>
+        <p>In 50 words</p>
+        <textarea id="msg" name="user-message"
+        rows="4" cols="50" placeholder=""></textarea>
+        <p>Upload police clearence certificate,bank statement and medical certificate here:
+            <button>Attach Files</button>
+        </p>
+    </div>
+</fieldset>
+<div id="submitbutton">
+    <button type="submit" id="submit">send your application</button>
+</div>
+</form>
+</div>
